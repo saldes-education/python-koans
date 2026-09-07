@@ -6,24 +6,24 @@ from sentinel import ____
 
 def test_empty_list_is_falsy():
     """Tomma samlingar är falsy i Python. Är [] sant eller falskt?"""
-    assert bool([]) == ____
+    assert bool([]) == False
 
 
 def test_nonempty_list_is_truthy_even_with_falsy_element():
     """En lista med ett element är truthy — oavsett vad elementet är.
     Är [0] sant eller falskt?"""
-    assert bool([0]) == ____
+    assert bool([0]) == True
 
 
 def test_zero_float_is_falsy():
     """Noll är falsy oavsett taltyp. Är 0.0 sant eller falskt?"""
-    assert bool(0.0) == ____
+    assert bool(0.0) == False
 
 
 def test_none_is_falsy():
     """None representerar frånvaron av ett värde och är alltid falsy.
     Är None sant eller falskt?"""
-    assert bool(None) == ____
+    assert bool(None) == False
 
 
 # === and och or returnerar operander, inte booleans ===
@@ -32,19 +32,19 @@ def test_none_is_falsy():
 def test_or_returns_first_truthy_operand():
     """or returnerar den första truthy operanden — inte bokstavligen True eller False.
     Vad returnerar "hej" or "standard"?"""
-    assert ("hej" or "standard") == ____
+    assert ("hej" or "standard") == "hej"
 
 
 def test_or_returns_right_operand_when_left_is_falsy():
     """Om den vänstra operanden är falsy returnerar or den högra operanden.
     Vad returnerar "" or "standard"?"""
-    assert ("" or "standard") == ____
+    assert ("" or "standard") == "standard"
 
 
 def test_and_short_circuits_on_first_falsy():
     """and returnerar den första falsy operanden — "standard" evalueras aldrig.
     Vad returnerar None and "hej"?"""
-    assert (None and "hej") == ____
+    assert (None and "hej") == None
 
 
 # === None-jämförelser ===
